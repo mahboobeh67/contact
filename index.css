@@ -1,0 +1,165 @@
+
+
+
+:root{
+    --lightGreen: hsl(148, 38%, 91%);
+    --Green:hsl(169, 82%, 27%);
+    --Red:hsl(0, 66%, 56%);
+    --White:hsl(0, 0%, 100%);
+    --Medium-Grey:hsl(186, 15%, 59%);
+    --DarkGreen:hsl(187, 24%, 22%);
+
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--lightGreen);
+    font-family: sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+.wrapper{
+background-color: var(--White);
+padding: 2rem;
+max-width: 650px;
+width: 100%;
+border-radius: 5px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.wrapper h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+.split .form-split input{
+    width: 280px;
+}
+.form-control input, 
+.message textarea{
+    width: 100%;
+    outline: none;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--lightGreen);
+    resize: none;
+}
+.form-control .split{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.form-control input:focus,
+ .message textarea:focus{
+    border: 1px solid var(--Green);
+}
+.form-control label,
+ .radio-controls label{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.radio-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.split-radio{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    /* border: 1px solid var(--DarkGreen); */
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--lightGreen);
+    margin-bottom: 0.5rem;
+
+}
+.radio-controls{
+    margin-bottom: 2rem;
+}
+.split-radio:active{
+    background-color: var(--lightGreen);
+}
+.terms{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+   
+}
+.terms-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.terms p{
+    margin-left: 1rem;
+    display: block;
+}
+form button{
+    outline: none;
+    border: none;
+    background-color: var(--Green);
+    color: var(--White);
+    width: 100%;
+    padding: 1rem 0rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-family: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+form button:focus{
+   transform: scale(0.98); 
+}
+
+.error{
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    color: var(--Red);
+}
+
+@media (min-width: 320px) and (max-width: 540px) {
+    .wrapper{
+        padding: 1rem;
+    }
+    .form-control, 
+    .form-control .split,
+    .form-split,
+     .radio-control{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .split .form-split input{
+        width: 100%;
+    }
+    .message{
+        width: 100%;
+    }
+    h2{
+        text-align: center;
+    }
+    #radio{
+        text-align: center;
+    }
+    
+}
